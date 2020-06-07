@@ -1,4 +1,4 @@
-namespace SitesApi.Controllers
+namespace SitesApi.Models
 {
     public class SiteModel
     {
