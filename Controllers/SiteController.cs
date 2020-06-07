@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+// using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SitesApi.Models;
@@ -12,10 +12,6 @@ namespace SitesApi.Controllers
     [Route("[controller]")]
     public class SitesController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
         private readonly ILogger<SitesController> _logger;
 
@@ -28,7 +24,7 @@ namespace SitesApi.Controllers
         public IEnumerable<SiteModel> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new SiteModel
+            return Enumerable.Range(1, 50).Select(index => new SiteModel
             {
                 Id = index,
                 Name = $"{nameof(SiteModel.Name)}_{index}",
